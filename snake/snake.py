@@ -3,7 +3,7 @@ import sys
 import random
 pygame.init()
 screen = pygame.display.set_mode((640,480), pygame.RESIZABLE)
-pygame.display.set_caption(" game (lytsoft)")
+pygame.display.set_caption(" Snake (lytsoft)")
 UPDATE_SNAKE_EVENT = pygame.USEREVENT + 1
 pygame.time.set_timer(UPDATE_SNAKE_EVENT, 500)
 def game_over():
