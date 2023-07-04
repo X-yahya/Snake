@@ -28,20 +28,15 @@ def game_over():
                     direction = (segment_size,0)
                     return
 
+
+
 segment_size = 20
-
 snake = [(300,300),(320,300)]
-
 radius = segment_size - 10
-
 x = random.randint(radius, screen.get_width()-radius) // segment_size * segment_size
-
 y = random.randint(radius, screen.get_height()-radius) // segment_size * segment_size
-
 apple = (x,y)
-
 direction = (segment_size,0)
-
 score = 0
 
 
@@ -63,7 +58,7 @@ while True :
             elif event.key == pygame.K_DOWN and direction != (0, -segment_size):
                 direction = (0, segment_size)
         elif event.type == UPDATE_SNAKE_EVENT:
-            # Update snake position
+            # update snake position
             for i in range(len(snake)-1, 0, -1):
                 snake[i] = (snake[i-1][0], snake[i-1][1])
             snake[0] = (snake[0][0] + direction[0], snake[0][1] + direction[1])
